@@ -1,2 +1,31 @@
-p {
-  color: navy; }
+@font-face {
+  font-family: 'stopwatch';
+  src: url("./assets/fonts/stopwatch.eot?od38mz#iefix") format("embedded-opentype"), url("./assets/fonts/stopwatch.ttf?od38mz") format("truetype"), url("./assets/fonts/stopwatch.woff?od38mz") format("woff"), url("./assets/fonts/stopwatch.svg?od38mz#stopwatch") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block; }
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'stopwatch' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.ic-play:before {
+  content: "\e900";
+  color: #fff; }
+
+h1 {
+  font-family: 'Roboto', sans-serif; }
+
+h2 {
+  font-family: 'Roboto Mono', monospace; }
+
+div {
+  background-color: black; }
