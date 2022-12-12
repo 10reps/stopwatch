@@ -1,12 +1,13 @@
+@import './constants/typography';
 @import './constants/colors';
 @import './base/fonts';
 
 h1 {
-    font-family: 'Roboto', sans-serif;
+    font-family: $font-roboto;
 }
 
 h2 {
-    font-family: 'Roboto Mono', monospace;
+    font-family: $font-roboto-mono;
 }
 
 div {
