@@ -1,6 +1,14 @@
 @import './constants/typography';
 @import './constants/colors';
+
 @import './base/fonts';
+
+@import './modules/buttons';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
 
 h1 {
     font-family: $font-roboto;

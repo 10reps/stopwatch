@@ -1,0 +1,34 @@
+%btn-base {
+    width: 648px;
+    height: 64px;
+    border-radius: 8px;
+    border: none;
+    font-size: $font-size-16;
+    font-family: $font-roboto;
+    color: $white;
+}
+
+.btn-play-default {
+    @extend %btn-base;
+    background-color: $green-dark;
+}
+
+.btn-play-hover {
+    @extend %btn-base;
+    background-color: $green;
+}
+
+.btn-play-disabled {
+    @extend %btn-base;
+    background-color: $green-light;
+}
+
+.btn-stop-default {
+    @extend %btn-base;
+    background-color: $red;
+}
+
+.btn-stop-hover {
+    @extend %btn-base;
+    background-color: $red-dark;
+}
