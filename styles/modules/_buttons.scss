@@ -1,10 +1,12 @@
 %btn-base {
     width: 648px;
     height: 64px;
-    border-radius: 8px;
+    margin-left: 8px;
     border: none;
+    border-radius: 8px;
     font-size: $font-size-16;
     font-family: $font-roboto;
+    font-weight: 700;
     color: $white;
 }
 
