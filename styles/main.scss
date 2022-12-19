@@ -10,6 +10,48 @@
     margin: 0;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: $grey1;
+}
+
+.timer-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1120px;
+    height: 740px;
+    border-radius: 8px;
+    background-color: $grey2;
+}
+
+.number-box {
+    display: flex;
+    margin-bottom: 56px;
+}
+
+.number {
+    width: 128px;
+    height: 198px;
+    border-radius: 8px;
+    background-color: $grey3;
+}
+
+.number:nth-child(1) {
+    margin-right: 16px;
+}
+
+.number:nth-child(2) {
+    margin-right: 104px;
+}
+
+.number:nth-child(3) {
+    margin-right: 16px;
+}
+
 .ic-play {
     margin-right: 8px;
     font-weight: 700;
