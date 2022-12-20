@@ -7,6 +7,7 @@
 
 * {
     box-sizing: border-box;
+    text-align: center;
     margin: 0;
 }
 
@@ -30,7 +31,11 @@ body {
 
 .number-box {
     display: flex;
+    position: relative;
     margin-bottom: 56px;
+    font-family: $font-roboto-mono;
+    font-size: $font-size-160;
+    color: $white;
 }
 
 .number {
@@ -38,6 +43,7 @@ body {
     height: 198px;
     border-radius: 8px;
     background-color: $grey3;
+    line-height: 1.2;
 }
 
 .number:nth-child(1) {
@@ -50,6 +56,28 @@ body {
 
 .number:nth-child(3) {
     margin-right: 16px;
+}
+
+.circle-one {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $green;
+    position: absolute;
+    left: 50%;
+    top: 65px;
+    transform: translate(-50%);
+}
+
+.circle-two {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $green;
+    position: absolute;
+    left: 50%;
+    bottom: 35px;
+    transform: translate(-50%);
 }
 
 .ic-play {
