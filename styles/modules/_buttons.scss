@@ -9,27 +9,24 @@
     color: $white;
 }
 
-.btn-play-default {
-    @extend %btn-base;
-    background-color: $green-dark;
-}
-
-.btn-play-hover {
+.play-btn {
     @extend %btn-base;
     background-color: $green;
+
+    &:hover {
+        background-color: $green-dark;
+    }
+
+    &:disabled {
+        opacity: 0.7;
+    }
 }
 
-.btn-play-disabled {
-    @extend %btn-base;
-    background-color: $green-light;
-}
-
-.btn-stop-default {
+.stop-btn {
     @extend %btn-base;
     background-color: $red;
-}
 
-.btn-stop-hover {
-    @extend %btn-base;
-    background-color: $red-dark;
+    &:hover {
+        background-color: $red-dark;
+    }
 }
