@@ -80,12 +80,22 @@ body {
     transform: translate(-50%);
 }
 
+.button-box {
+    display: flex;
+    justify-content: space-between;
+}
+
 .ic-play {
     margin-right: 8px;
     font-weight: 700;
 }
 
 .ic-handpalm {
+    margin-right: 8px;
+    font-weight: 700;
+}
+
+.ic-timer {
     margin-right: 8px;
     font-weight: 700;
 }

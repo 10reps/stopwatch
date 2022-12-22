@@ -46,8 +46,8 @@ i {
   content: "\e909";
   color: #fff; }
 
-.play-btn, .stop-btn {
-  width: 648px;
+.play-btn, .stop-btn, .reset-btn {
+  width: 271px;
   height: 64px;
   border: none;
   border-radius: 8px;
@@ -67,6 +67,11 @@ i {
   background-color: #AB222E; }
   .stop-btn:hover {
     background-color: #7A1921; }
+
+.reset-btn {
+  background-color: #0064FF; }
+  .reset-btn:hover {
+    background-color: #0066ff93; }
 
 * {
   box-sizing: border-box;
@@ -133,10 +138,18 @@ body {
   bottom: 35px;
   transform: translate(-50%); }
 
+.button-box {
+  display: flex;
+  justify-content: space-between; }
+
 .ic-play {
   margin-right: 8px;
   font-weight: 700; }
 
 .ic-handpalm {
+  margin-right: 8px;
+  font-weight: 700; }
+
+.ic-timer {
   margin-right: 8px;
   font-weight: 700; }

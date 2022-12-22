@@ -1,5 +1,5 @@
 %btn-base {
-    width: 648px;
+    width: 271px;
     height: 64px;
     border: none;
     border-radius: 8px;
@@ -28,5 +28,14 @@
 
     &:hover {
         background-color: $red-dark;
+    }
+}
+
+.reset-btn { 
+    @extend %btn-base;
+    background-color: $blue;
+
+    &:hover {
+        background-color: $blue-dark;
     }
 }
