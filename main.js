@@ -2,19 +2,16 @@ const btnBox = document.querySelector('.button-box');
 const playBtn = document.querySelector('.play-btn');
 const stopBtn = document.querySelector('.stop-btn');
 const time = { elapsedTime: 0 };
+const number = document.querySelector('.number');
 
 playBtn.addEventListener('click', () => {
     if (playBtn.innerText === 'START') {
         start();
-        playBtn.className = 'stop-btn'
         playBtn.innerHTML = '<i class="ic-handpalm"></i>STOP'
-    }
-});
-
-stopBtn.addEventListener('click', () => {
-    if (playBtn.innerText === 'STOP') {
-        stopBtn.className = 'play-btn'
-        stopBtn.innerHTML = '<i class="ic-play"></i>START'
+        document.getElementById('main-button').style.backgroundColor = 'red';
+    } else {
+        document.getElementById('main-button').style.backgroundColor = 'green';
+        playBtn.innerHTML = '<i class="ic-play"></i>START'
     }
 });
 
@@ -27,9 +24,9 @@ function start() {
         const seconds = parseInt((elapsedTime/1000)%60);
 
         displayTime(minutes, seconds);
-    }, 100);
+    }, 1000);
 };
 
 function displayTime(minutes, seconds) {
-    
+    number.innerHTML = `${seconds}`
 }
