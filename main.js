@@ -2,17 +2,20 @@ const btnBox = document.querySelector('.button-box');
 const playBtn = document.querySelector('.play-btn');
 const stopBtn = document.querySelector('.stop-btn');
 const time = { elapsedTime: 0 };
-const number = document.querySelector('.number');
+const numOne = document.querySelector('.one');
+const numTwo = document.querySelector('.two');
+const numThree = document.querySelector('.three');
+const numFour = document.querySelector('.four');
 
 playBtn.addEventListener('click', () => {
     if (playBtn.innerText === 'START') {
+        playBtn.classList.replace('play-btn', 'stop-btn');
+        playBtn.innerHTML = '<i class="ic-handpalm"></i>STOP';
         start();
-        playBtn.innerHTML = '<i class="ic-handpalm"></i>STOP'
-        document.getElementById('main-button').style.backgroundColor = 'red';
     } else {
-        document.getElementById('main-button').style.backgroundColor = 'green';
-        playBtn.innerHTML = '<i class="ic-play"></i>START'
-    }
+        playBtn.classList.replace('stop-btn', 'play-btn');
+        playBtn.innerHTML = '<i class="ic-play"></i>START';
+    };
 });
 
 function start() {
@@ -28,5 +31,11 @@ function start() {
 };
 
 function displayTime(minutes, seconds) {
-    number.innerHTML = `${seconds}`
-}
+    let i = 0;
+
+    if (seconds < 10) {
+        numFour.innerHTML = `${seconds}`;
+    } else {
+        numThree.innerHTML = 3;
+    };
+};
