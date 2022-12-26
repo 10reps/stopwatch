@@ -31,11 +31,14 @@ function start() {
 };
 
 function displayTime(minutes, seconds) {
-    let i = 0;
+    let i = 1;
 
     if (seconds < 10) {
         numFour.innerHTML = `${seconds}`;
-    } else {
-        numThree.innerHTML = 3;
-    };
+    } else if (seconds === 10) {
+        numFour.innerHTML = 0;
+        numThree.innerHTML = i;
+    } else if (seconds > 11) {
+        numFour.innerHTML = 1;
+    }
 };
