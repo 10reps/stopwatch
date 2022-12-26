@@ -102,12 +102,21 @@ body {
   font-size: 160px;
   color: #FFFFFF; }
 
-.number {
+.minute-box, .second-box {
+  display: flex;
+  position: relative; }
+
+.minute, .second {
+  position: absolute;
+  bottom: 0.3px;
+  left: 17px;
+  letter-spacing: 0.295em; }
+
+.box {
   width: 128px;
   height: 198px;
   border-radius: 8px;
-  background-color: #323238;
-  line-height: 1.2; }
+  background-color: #323238; }
 
 .one {
   margin-right: 16px; }
