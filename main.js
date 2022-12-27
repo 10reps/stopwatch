@@ -2,10 +2,6 @@ const btnBox = document.querySelector('.button-box');
 const playBtn = document.querySelector('.play-btn');
 const stopBtn = document.querySelector('.stop-btn');
 const time = { elapsedTime: 0 };
-const numOne = document.querySelector('.one');
-const numTwo = document.querySelector('.two');
-const numThree = document.querySelector('.three');
-const numFour = document.querySelector('.four');
 
 playBtn.addEventListener('click', () => {
     if (playBtn.innerText === 'START') {
