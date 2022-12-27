@@ -2,6 +2,8 @@ const btnBox = document.querySelector('.button-box');
 const playBtn = document.querySelector('.play-btn');
 const stopBtn = document.querySelector('.stop-btn');
 const time = { elapsedTime: 0 };
+const minute = document.querySelector('.minute');
+const second = document.querySelector('.second');
 
 playBtn.addEventListener('click', () => {
     if (playBtn.innerText === 'START') {
@@ -9,6 +11,8 @@ playBtn.addEventListener('click', () => {
         playBtn.innerHTML = '<i class="ic-handpalm"></i>STOP';
         start();
     } else {
+        time.elapsedTime += Date.now() - time.startTime;
+        clearInterval(time.intervalId);
         playBtn.classList.replace('stop-btn', 'play-btn');
         playBtn.innerHTML = '<i class="ic-play"></i>START';
     };
@@ -22,19 +26,17 @@ function start() {
         const minutes = parseInt((elapsedTime/(1000*60))%60);
         const seconds = parseInt((elapsedTime/1000)%60);
 
-        displayTime(minutes, seconds);
-    }, 1000);
+        secondTime(seconds);
+        minuteTime(minutes);
+    }, 100);
 };
 
-function displayTime(minutes, seconds) {
-    let i = 1;
+function secondTime(seconds) {
+    const getSeconds = seconds < 10 ? `0${seconds}` : seconds;
+    second.innerText = getSeconds;
+};
 
-    if (seconds < 10) {
-        numFour.innerHTML = `${seconds}`;
-    } else if (seconds === 10) {
-        numFour.innerHTML = 0;
-        numThree.innerHTML = i;
-    } else if (seconds > 11) {
-        numFour.innerHTML = 1;
-    }
+function minuteTime(minutes) {
+    const getMinutes = minutes < 10 ? `0${minutes}` : minutes;
+    minute.innerText = getMinutes;
 };
